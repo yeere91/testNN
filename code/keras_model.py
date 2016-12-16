@@ -31,7 +31,7 @@ from sklearn.metrics import log_loss
 from scipy.misc import imread, imresize, imshow
 
 use_cache = 1
-num_classes = 10
+num_classes = 4
 
 
 def show_image(im, name='image'):
@@ -97,7 +97,7 @@ def load_train(img_rows, img_cols, color_type=1):
 
     print('Read train images')
     for j in range(num_classes):
-        print('Load folder c{}'.format(j))
+        print('Load folder '.format(j))
         path = os.path.join('..', 'input', 'train', 'c' + str(j), '*.jpg')
         files = glob.glob(path)
         for fl in files:
